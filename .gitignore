@@ -1,0 +1,9 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# PyQt, temp
+*.log
+
+.ollama_cache/
+outputs/
