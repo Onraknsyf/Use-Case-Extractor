@@ -1,0 +1,44 @@
+[
+  {
+    "usecase": "GENEL",
+    "title": "Görev 1: Tablo ve Sequence Oluşturma",
+    "description": "OMNI_SEND_CUST_CODE adlı bir tablo oluşturulmalı ve GNL_ST tablosunda bu tablo için NOT_PROCESSED, PROCESSED, FAULT statüleri eklenmeli. Seq_OPERA_CUST_CODE adında yeni bir sequence de oluşturulmalıdır.",
+    "testCase": "Tablo ve sequence'in başarılı şekilde oluşturulduğuna emin olun."
+  },
+  {
+    "usecase": "GENEL",
+    "title": "Görev 2: Opera Siparişleri İşlemleri",
+    "description": "Opera siparişlerinde, kurumsal/bireysel ve PREPAID/POSTPAID tüm REAL_SALE, ISS_TRANS_IN ve RE_ACTV işlemlerinde, 'aa_opera_cust_code' karakteristiği CUST_ACCT_CHAR_VAL üzerine yazılmalı. Müşterinin CUST_ACCT hesabı üzerinde 'aa_opera_cust_code' karakteristiği atanmalı.",
+    "testCase": "Örnek siparişler için işlemlerin başarılı şekilde gerçekleştirildiğine emin olun."
+  },
+  {
+    "usecase": "GENEL",
+    "title": "Görev 3: aa_opera_cust_code Değer Üretimi",
+    "description": "aa_opera_cust_code karakteristik değerinin üretim kurallarını, sequence değeri 1.000.000'den başlayacak şekilde belirleyin ve bu kurallara göre işlemler için değerler üretilmeli.",
+    "testCase": "Üretim kurallarına uygun 'aa_opera_cust_code' değerlerinin üretildiğine emin olun."
+  },
+  {
+    "usecase": "GENEL",
+    "title": "Görev 4: OMNI Siparişleri İşlemleri",
+    "description": "OMNI'den gönderilen ödeme tipi PREPAID / POSTPAID olan ve REAL_SALE / ISS_TRANS_IN / RE_ACTV işlemlerinde, 'aa_opera_cust_code' karakteristiği CUST_ACCT_CHAR_VAL üzerine yazılmalı. Bu karakteristik ASYNC_ORD_PEAK_CALLNG_SYSTM joblarıyla müşteri üzerine yazılacak.",
+    "testCase": "OMNI siparişleri için işlemlerin başarılı şekilde gerçekleştirildiğine emin olun."
+  },
+  {
+    "usecase": "GENEL",
+    "title": "Görev 5: Asset Senkronizasyon",
+    "description": "Asset senkronizasyonla gelen datalar için SYNC_REAL_SALE eventiyle CUST_ACCT_CHAR_VAL üzerine 'aa_opera_cust_code' karakteristiği atılacak. Mevcut 'aa_opera_cust_code' ile tarife değişiklikleri işlemlerinin devam etmesi ve OMNI senkronizasyonu gerçekleştirilmeli.",
+    "testCase": "Asset senkronizasyonunda 'aa_opera_cust_code' karakteristik değerinin doğru atandığına ve tarife değişikliklerinde kullanıldığına emin olun."
+  },
+  {
+    "usecase": "GENEL",
+    "title": "Görev 6: aa_opera_cust_code Değerinin OMNI’ye İletilmesi",
+    "description": "Opera’dan başlayan REAL_SALE, RE_ACTV, ISS_TRANS_IN işlemleri için 'aa_opera_cust_code' karakteristiği iletilmelidir. Asset’ten SYNC_REAL_SALE eventinde gelen müşteri için üretilen 'aa_opera_cust_code' değeri OMNI’ye iletilmelidir ve 'OMNI_SEND_CUST_CODE' tablosuna kayıt atılmalıdır.",
+    "testCase": "Operadan ve Assetten gelen siparişler için 'aa_opera_cust_code' değerinin doğru iletildiğine ve kaydedildiğine emin olun."
+  },
+  {
+    "usecase": "GENEL",
+    "title": "Görev 7: OMNI_SEND_CUST_CODE Tablosu İşlemleri",
+    "description": "Assetle gelen müşteri oluşturulduktan sonra 'OMNI_SEND_CUST_CODE' tablosuna kayıt atılacak. Kayıt tabloya 'NOT_PROCESSED' statüsünde atılacak ve 'OMNI_SEND_CUST_CODE_JOB' job’ı 'NOT_PROCESSED' ve 'FAULT' statüsüdeki kayıtlar için 'XOMNIwsX' servisini tetikleyecektir. Servis hata alırsa tablodaki statü FAULT, hata almaz ise 'PROCESSED' statüsüne çekilecektir.",
+    "testCase": "'OMNI_SEND_CUST_CODE' tablosunda işlemlerin başarılı şekilde gerçekleştirildiğine ve servisin hatasız çalıştığına emin olun."
+  }
+]

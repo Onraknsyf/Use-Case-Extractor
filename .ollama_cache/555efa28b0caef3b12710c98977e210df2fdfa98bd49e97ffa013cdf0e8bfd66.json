@@ -1,0 +1,80 @@
+[
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 1: Bireysel Müşteri Ekranı Düzenlenmesi",
+    "description": "Bireysel Müşteri oluşturma ekranlarından As-is ovit metni ve combobox kaldırılacak.",
+    "testCase": "As-is bileşenlerdeki OVIT seçeneklerinin kaldırıldığını doğrula."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 2: Müşteri Tercihlerindeki İzinler Kaldırılacak",
+    "description": "Müşteri Tercihlerindeki asis ivit ve pazarlama izni tercihleri müşteri tercihlerinden kaldırılacak.",
+    "testCase": "As-is bileşenlerdeki Önceki OVIT, IVIT ve Pazarlama İzinlerinin yok olduğından emin olun."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 3: Bireysel Müşteri Oluşturma Ekranı Düzenlenmesi",
+    "description": "Bireysel Müşteri oluşturulurken OVIT, IVIT ve pazarlama izni seçenekleri Müşteri Tercihleri ekranında olacak. Tercihler ekranda yeni bir grup olarak eklenecek. grup ismi \"Paylaşım ve Bilgilendirme İzinleri\" olacaktır.",
+    "testCase": "Yeni bileşenlerde OVIT, IVIT ve Pazarlama izni seçeneklerinin yer aldığına ve gruplarının doğru şekilde işlenmiş olduğu doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 4: Önceki İzinler GNL_CHAR Tablosuna Eklenecek",
+    "description": "OVIT, IVIT ve Pazarlama izni tercihleri kurumsal işlemlerde müşteri tercihlerinde görünmeyecektir. Tercihlerin kurumsal işlemlerde müşteri tercihlerinde görünmemesi için, GNL_CHAR tablosunda aa_ovit, aa_cust_share, aa_broadcast karakteristiklerinin PRE_DISP_CLS kolonuna provider’lar eklenecek.",
+    "testCase": "GNL_CHAR tablosu içindeki aa_ovit, aa_cust_share ve aa_broadcast karakteristikleri için PRE_DISP_CLS kolonundaki provider'ların doğru olarak yer aldığı doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 5: OVIT ve IVIT Seçeneklerinin Combo-Box Oluşturulması",
+    "description": "OVIT ve IVIT için seçimler combo-box olacak. Combo-box seçimleri arasında \"Seçiniz, İzin Verilsin, İzin verilmesin\" olacaktır. Ekran açıldığında default olarak \"Seçiniz\" gösterilecek.",
+    "testCase": "Yeni bileşenlerde OVIT ve IVIT seçeneklerinin doğru combo-box olarak işlenmiş olduğu doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 6: Pazarlama İzni Seçimi Combo-Box Oluşturulacak",
+    "description": "Pazarlama izni için de seçim combo-box olacak. Combo-box seçimleri arasında \"İzin Verilsin, İzin verilmesin\" olacaktır. Ekran açıldığında default olarak \"İzin Verilsin\" gösterilecek.",
+    "testCase": "Yeni bileşenlerde Pazarlama izni seçeneğinin doğru combo-box olarak işlenmiş olduğu doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 7: OVIT Tercihinin Zorunlu Olması",
+    "description": "OVIT tercihi zorunlu olacak. Seçim yapılmadan ilerlenemeyecektir.",
+    "testCase": "Yeni bileşenlerde OVIT seçimi yapılamadan işlemlerin devam ettireilemeyeceği doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 8: OVIT ve IVIT Tercihlerinin Bağımlılığının Sağlanması",
+    "description": "OVIT \"İzin veriyorum\" olarak seçildiğinde IVIT tercihi default olarak \"İzin Verilsin\" olarak gösterilecek ve seçime kapatılacaktır. OVIT \"İzin Vermiyorum\" olarak seçilirse IVIT izni zorunlu olacak.",
+    "testCase": "Yeni bileşenlerde OVIT ve IVIT seçimleri arasındaki bağımlılıkların doğru şekilde işlenmiş olduğu doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 9: Tercihlerin Açıklamalarının Gösterilmesi",
+    "description": "OVIT, IVIT ve Pazarlama izni yazılarının üzerine hover (fareyle gelme) işlemi gerçekleştiğinde açıklamaları gösterilecek. Açıklama olarak gösterilecek metinler \"PERMS_TEXT_SPEC_EXT\" tablosundan alınacak.",
+    "testCase": "Yeni bileşenlerde OVIT, IVIT ve Pazarlama izni yazılarının üzerine hover işleminden sonra açıklama mesajlarının doğru olarak görüntülenmiş olduğu doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 10: FF ve CreatePortIn İşlemlerinde Karakteristiklerin Setlenmesi",
+    "description": "FF ve CreatePortIn’de karakteristikler setlenirken ekranden seçilen \"İzin Veriyorum\" seçeneği aa_ovit ve aa_cust_share karakteristikleri \"true\", \"İzin vermiyorum\" seçildiğinde ise karakteristikler \"false\" olarak setlenecek. Ekrandan OVIT (aa_ovit) \"İzin veriyorum\" olarak seçildiğinde IVIT (aa_cust_share) izni FF ve CreatePortIn’de \"true\" olarak çıkacak.",
+    "testCase": "FF ve CreatePortIn işlemlerinde karakteristiklerin doğru şekilde setlenmiş olduğu doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 11: Pazarlama İzni Karakteristiklerinin Setlenmesi",
+    "description": "Ekrandan Pazarlama izni \"İzin Veriyorum\" olarak seçilir ise \"aa_broadcast\", \"aa_broadcast_ivr\", \"aa_broadcast_email\", \"aa_broadcast_live_call\", \"aa_broadcast_screen_notif\" ve \"aa_broadcast_sms\" karakteristikleri \"true\" olarak seçilecektir. Eğer ekrandan \"izin vermiyorum\" seçilir ise FF ve CreatePortin servisinde karakteristiklerin tamamı \"false\"olacaktır.",
+    "testCase": "FF ve CreatePortIn işlemlerinde Pazarlama izni seçeneğinin doğru karakteristiklere setlenmiş olduğu doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 12: aa_get_perms Karakteristiği İşlenmesi",
+    "description": "REAL_SALE,ISS_TRANS_IN,RE_ACTV,TRANS,ACC_LVLCANCEL, PRE2PRE,POST2POST,PRE2POST, POST2PRE, GPO_PRE2POST, GPO_POST2PRE, GPO_PRE2PRE, GPO_POST2POST işlemlerinde \"aa_get_perms\" karakteristiği order seviyesinde çıkmalı ve \"true\" setlenmelidir.",
+    "testCase": "Belirtilen işlemlerde aa_get_perms karakteristiklerinin doğru şekilde işlenmiş olduğu doğrulanmalıdır."
+  },
+  {
+    "usecase": "UC-1 Bireysel Yeni Aktivasyon, Yeniden Aktivasyon, Numara Taşıma ve Devir Süreçlerinde Ovit, Ivt ve Pazarlama İzinlerinin Düzenlenmesi",
+    "title": "GÖREV 13: İzin Bilgilerinin Loglanması",
+    "description": "İzin bilgileri ayrıca \"PERMS_INFO_LOG\" tablosuna loglanacaktır.",
+    "testCase": "Belirtilen işlemlerin PERMS_INFO_LOG tablosunda doğru şekilde loglandığı doğrulanmalıdır."
+  }
+]
